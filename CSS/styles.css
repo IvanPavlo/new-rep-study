@@ -1,0 +1,323 @@
+
+/*подключение типа box-sizing */
+html {box-sizing: border-box;}
+/* наследоввание */
+*.
+*::before
+*::after{
+box-sizing: inherit;
+}
+
+/* цвет основного текста #212121; */
+/* цвет второичного текста #757575; */
+/* logo color Акцент #2196F3; */
+/* background color #E5E5E5; */
+/* background color team #F5F4FA; */
+/* background header & button color #FFFFFF; */
+/* background footer #2F303A;*/
+:root
+{
+    --primary-text-color:#212121;
+    --secondary-text-color:#757575; 
+    --accent-color:#2196F3;
+    --primary-background-color:#E5E5E5;;
+    --secondary-background-color:#F5F4FA;
+    --header-background-color:#FFFFFF;
+    --footer-background-color:#2F303A;;
+    --footer-contact-color: rgba(255, 255, 255, 0.6);
+}
+/* Используемые шрифты */
+/* Шрифт лого Raleway, жирность 700
+Шрифт остального текста Roboto, жирность 900 герой, 700 заголовки, 500 нави, 400 текст  */
+
+body {
+background-color: var(--header-background-color);
+color: var(--primary-text-color);
+font-family: roboto, sans-serif;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+}
+.main-conteiner{
+width: 1200px;    
+padding-left: 15px;
+padding-right: 15px;
+}
+
+                            /* УТИЛИТЫ */
+
+/* убираем точки в списке */
+.list {list-style: none;
+/* убираем все падинги и маржены */
+margin: 0;
+padding: 0;
+/* убираем подчеркивание ссылок */
+text-decoration: none;
+}
+
+/*логотипа */
+.logo{
+    color: var(--accent-color);
+    font-family: raleway,sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+
+
+}
+.logo-studio{
+    color: var(--primary-text-color);
+    font-family: raleway,sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+/* главная навигация */
+.conteiner-header{
+display: flex;
+align-items: center;
+}
+
+.site-nav{
+display: flex;
+margin-left: 92px;
+}
+
+/* убираем маржин правого пункта */
+.site-nav .item:not(:last-child){
+margin-right: 50px;
+}
+/* or -  .site-nav .item:last-child{
+margin: 0; */
+
+.site-nav .link{
+display: block;
+padding-top: 32px;
+padding-bottom: 32px;
+
+color: var(--primary-text-color);
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14px;
+letter-spacing: 0.02em;   
+text-decoration: none;
+}
+
+/* активность страницы на которой находишься */
+.site-nav .link.current
+{color: var(--accent-color);}
+
+
+/* активность ссылок навигации */
+.site-nav .link:focus, 
+.site-nav .link:hover{
+color: var(--accent-color);
+}
+/* навигация контактов */
+.contact-nav {
+display: flex;}
+.contact-nav .item:not(:last-child){
+margin-right: 50px;
+}
+.contact-nav{
+margin-left: auto;
+}
+
+.contact-nav .link {
+color: var(--secondary-text-color);
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14px;
+letter-spacing: 0.02em;
+text-decoration: none;
+}
+.contact-nav .link:focus,
+.contact-nav .link:hover {
+color: var(--accent-color);
+}
+                            /* Main Page */
+/* оформления героя */
+.hero{
+text-align: center;
+
+margin: 0;}
+
+.hero .button{
+background-color: var(--accent-color);
+color: var(--header-background-color);
+text-decoration: none;
+text-align: center;
+padding: 10px 32px;
+min-width: 200px;    
+height: 50px;
+border-radius: 4px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+/* background-color: var(--footer-background-color);
+}
+.hero h1{
+color:var(--header-background-color);
+width: 696px;
+height: 120px;
+padding-top: 200px;
+padding-bottom: 280px;
+padding-left: 452px;
+padding-right: 452px;
+text-align: center;
+} */
+
+
+/* .hero h1{
+color: var(--primary-text-color);
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36px;
+text-align: center;
+letter-spacing: 0.06em;
+} */
+
+/* цвет  заголовка и текста секций */
+.section-benefits{
+padding-top: 94px;
+padding-bottom: 0;
+margin: 0;
+}
+.section-benefits .item{
+width: 270px;
+}
+
+.section-benefits .list{
+display: flex;
+}
+.section-benefits .title-list{
+color: var(--primary-text-color);
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+padding: 0;
+margin: 0;
+}
+
+.section-benefits .text{
+color: var(--secondary-text-color);
+margin: 0%;
+}
+/* Оформления чем мы занимаемся */
+
+.section-works{
+padding-top: 94px;
+padding-bottom: 0;
+margin: 0;
+}
+.photo{
+display: block;
+}
+
+.section-works .title, .section-team .title{
+font-weight: 700;
+font-size: 36px;
+line-height: 1.17;
+text-align: center;
+margin-top: 0;
+margin-bottom: 50px;
+}
+
+.section-works .list{
+padding: 0;
+}
+/* Наша команда */
+
+.section-team{
+background-color: var(--secondary-background-color);
+
+}
+.section-team .name{
+color: var(--primary-text-color);
+font-weight: 500;
+font-size: 16px;
+line-height: 1.19;
+margin-top: 30;
+margin-bottom: 10;
+}
+
+.section-team .text{
+color: var(--secondary-text-color);
+font-weight: 400;
+font-size: 16px;
+line-height: 1.19px;
+}
+
+
+
+/* Footer */
+.footer{
+background-color: var(--footer-background-color);
+/* padding: 0; */
+}
+.footer .adress{
+color: var(--header-background-color);
+text-decoration: none;
+}
+.footer .link{
+color: var(--footer-contact-color);
+text-decoration: none;
+}
+.footer .logo-studio{
+color:var(--header-background-color);
+text-decoration: none;
+}
+.footer .logo{
+padding-top: 60;
+padding-bottom: 161;
+}
+
+/* Button */
+
+
+
+                    /* Portfolio Page */
+
+/* оформление ссылок через класс */
+/* .portfolio .button{
+color:var(--primary-text-color);
+background-color: var(--secondary-background-color);
+}
+.portfolio .button:hover, 
+.portfolio .button:focus{
+color:var(--header-background-color);
+background-color:var(--accent-color);
+}     */
+
+/* оформление через тег button */
+button{
+color: var(--primary-text-color);
+background-color: var(--secondary-background-color); 
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62;
+text-align: center;  
+padding: 6px 22px; 
+border-radius: 4px;
+border: 1px transparent;
+}
+button:hover, button:focus{
+color: var(--header-background-color);
+background-color: var(--accent-color);
+}
+.section-portfolio .title{
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;    
+}
+.section-portfolio .text{
+Font-weight: 400;
+font-size: 16px;
+line-height: 1.88;
+}
