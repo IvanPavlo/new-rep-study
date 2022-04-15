@@ -106,6 +106,8 @@ align-items: center;
 .site-nav{
 display: flex;
 margin-left: 92px;
+padding-top: 32px;
+padding-bottom: 32px;
 }
 
 /* убираем маржин правого пункта */
